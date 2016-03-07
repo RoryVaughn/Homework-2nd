@@ -1,0 +1,6 @@
+C:\Users\Rory.Vaughn\Desktop\C#\Duck\Duck\bin\Debug\Duck.exe.config
+C:\Users\Rory.Vaughn\Desktop\C#\Duck\Duck\bin\Debug\Duck.exe
+C:\Users\Rory.Vaughn\Desktop\C#\Duck\Duck\bin\Debug\Duck.pdb
+C:\Users\Rory.Vaughn\Desktop\C#\Duck\Duck\obj\Debug\Duck.csprojResolveAssemblyReference.cache
+C:\Users\Rory.Vaughn\Desktop\C#\Duck\Duck\obj\Debug\Duck.exe
+C:\Users\Rory.Vaughn\Desktop\C#\Duck\Duck\obj\Debug\Duck.pdb

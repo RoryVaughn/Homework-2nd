@@ -98,6 +98,10 @@ class Program
         Duck Dave = new Duck(10, 200);
         Jeff.takedamage(5);
         Jeff.takedamage(7);
+        List<IDamageable> fight = new List<IDamageable>;
+        {
+            
+        }
 
 
         Console.ReadLine();

@@ -11,6 +11,13 @@ namespace fsm
 
         public void leggo()
         {
+           
+        }
+        public class data
+        {
+            public List<int> Numbers;
+           
+
 
         }
         private List<Enum> States;

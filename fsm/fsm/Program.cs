@@ -6,38 +6,23 @@ using System.Threading.Tasks;
 
 namespace fsm
 {
-    class Program
+    public static class Units
     {
 
-        public void leggo()
-        {
-           
-        }
-        public class data
-        {
-            public List<int> Numbers;
-           
-
-
-        }
-        private List<Enum> States;
-
-        bool AddState(Enum state)
-        {
-            if (state.GetType() == typeof(Enum))
-            {
-                States.Add(state);
-                return true;
-            }
-            return false;
-        }
-
-        static void Main(string[] args)
-        {
 
 
 
 
-        }
+
+
+
     }
+
+
+
+
+
+
+
+
 }

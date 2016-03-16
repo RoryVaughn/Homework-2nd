@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿
 using System.Collections;
 using System.Collections.Generic;
 
@@ -32,6 +32,7 @@ public class FSM<T>
         if (!TransitionsList.Contains(name))
         {
             //Debug.Log("adding transition " + name);
+            //Th
             TransitionsList.Add(name);
         }
     }
@@ -41,6 +42,8 @@ public class FSM<T>
     {
         //checks the transition an object is trying to make to see if it is valid by checking it against
         //items in the list of valid transitions
+        //the ">" is placed there to add a separator to the code in order to  have a clear separation
+        //for the strings to be compiled as two separate things.
         string t = to.ToString();
         string f = from.ToString();
         string valid = f + ">" + t;
@@ -60,6 +63,8 @@ public class FSM<T>
             //Debug.Log("valid transition from " + from.ToString() + " to " + to.ToString());
             cState = to;
             Debug.Log("New State " + cState.ToString());
+            //should be changed to Console.write line but that shit dont work for some reason.
+            //figure out why that shit dont work.
             return true;
         }
         else

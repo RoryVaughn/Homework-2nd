@@ -18,10 +18,13 @@ namespace ADGP125
         class Fighter : I_Abilites
         {
             public string name;
-            public int health = 500;
-            public int mana = 100;
-            public int exp = 0;
-            public int lvl = 1;
+            public int health;
+            public int mana;
+            public int exp;
+            public int lvl;
+            public int Str;
+            public int att;
+            public int def;
 
             public void M1()
             {

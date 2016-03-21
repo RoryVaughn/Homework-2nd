@@ -19,7 +19,12 @@ namespace ADGP125
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("hello");
+            MessageBox.Show("You thought this thing worked?!  XD");
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

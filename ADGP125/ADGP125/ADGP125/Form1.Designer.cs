@@ -189,6 +189,7 @@
             this.textBox9.ReadOnly = true;
             this.textBox9.Size = new System.Drawing.Size(271, 37);
             this.textBox9.TabIndex = 12;
+            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox10
             // 
@@ -341,6 +342,7 @@
             this.textBox25.ReadOnly = true;
             this.textBox25.Size = new System.Drawing.Size(271, 37);
             this.textBox25.TabIndex = 34;
+            this.textBox25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox26
             // 

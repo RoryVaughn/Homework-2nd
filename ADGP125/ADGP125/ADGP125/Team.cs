@@ -8,10 +8,13 @@ namespace ADGP125
 {
     class Team
     {
+        
+
+
         interface I_Abilites
         {
-            void Auto();
-            void Spec();
+            void Auto(Fighter defender);
+            void Spec(Fighter defender);
             int cd(int x);
             
             
@@ -29,15 +32,19 @@ namespace ADGP125
             public int att; //possiblity of hitting the target
             public int def; //damage mitigation
 
-            public void Auto()
+            public void Auto(Fighter defender)
             {
                 //figure out how to decrease another SPECIFIC units health by strength.
+               
+                defender.health -= (Str * 10);
             }
 
-            public void Spec()
+            public void Spec(Fighter defender)
             {
                 //figure out how to decrease another specific unit's health by a modifier of the strength stat.
+                mana -= 10;
                 
+                defender.health -= (Str * 15);
             }
 
            
@@ -52,8 +59,17 @@ namespace ADGP125
             public Fighter(string F_Name, int F_Max_Health, int F_Health, int F_Max_Mana, int F_Mana, int F_Exp, int F_Level, int F_Str, int F_Att, int F_Def)
             
             {
-
-            }
+             name = F_Name; //The specific name stored for this specific object.
+             Max_health = F_Max_Health;//Maximum amount of mana that this unit can have.
+             health =  F_Health; //current Health68
+             Max_mana = F_Max_Mana; //Maximum amount of mana that this unit can have.
+             mana = F_Mana; //current mana
+             exp = F_Exp; //current experience
+             lvl = F_Level; //current overall level
+             Str = F_Str; //amount of possible damage
+             att = F_Att; //possiblity of hitting the target
+             def = F_Def;
+        }
         }
 
         

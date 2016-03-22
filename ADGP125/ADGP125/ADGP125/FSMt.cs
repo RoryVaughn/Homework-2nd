@@ -1,90 +1,84 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace FSM
+/*
+    Generic Finite State Machine that can be used with just about anything that need to transition between 
+    a finite amount of states
+*/
+public class FSM<T>
 {
-    struct Link<T>      //Item that holds the transition. THis is a single transition.
+    List<T> States;  //List of states an object can be and and can be changed for user prefrence
+
+    List<string> TransitionsList = new List<string>(); //list of all possible state transitions for a certain object
+
+
+    public FSM() //Contructor for the FSM
     {
-        public T from;
-        public T to;
+        States = new List<T>(); //creates a new list of states for each instance of the FSM
+        Console.WriteLine("State at creation  " + cState);
     }
 
-    class FSM<T>   //Finite State Machine.
+    public void AddState(T state)
     {
-        public T currentState;                      //Current State of the FSM
-        private Dictionary<T, List<Link<T>>> dict;  //Dictonary holding the States(Key) and the list of transitions it can have(Value).
+        //Adds states to the list of states for each object
+        States.Add(state);
+    }
+    public void AddTransition(T From, T To)
+    {
+        //
+        string name = From.ToString() + ">" + To.ToString();
 
-        public FSM(T state)         //Constructor
+        if (!TransitionsList.Contains(name))
         {
-            dict = new Dictionary<T, List<Link<T>>>();  //Giving directory space in memory.
-            AddState(state);
-            currentState = state;                       //Setting the current state to start on.
-        }
-
-        public bool AddState(T state)   //Adding a State to the FSM
-        {
-            if (dict.ContainsKey(state))    //Does this FSM already have this state?
-            {
-                //Has state
-                return false;
-            }
-
-            //Does not have this state.
-            dict.Add(state, new List<Link<T>>());   //Adds state to Dictonary as a Key with a blank set of Transitions.
-            return true;
-        }
-
-        public bool AddTransition(T from, T to) //Add a Transition to the key/state the player is from.
-        {
-            Link<T> temp = new Link<T>();   //Setting up a temp transition variable
-            temp.from = from;
-            temp.to = to;
-
-            if (dict[from].Contains(temp))  //Does this key/state already have this transition?
-            {
-                //If the transition Exists.
-                return false;
-            }
-
-            dict[from].Add(temp);   //Add transition to the list of transitions for that state/key
-            return true;
-        }
-
-        public void Print() //Print out the FSM's states with its valid transitions
-        {
-            Console.WriteLine("current states:");
-            int count = 0;
-            foreach (T key in dict.Keys)    //Prints the keys
-            {
-                Console.WriteLine("State " + count + " : " + key.ToString());
-                Console.WriteLine("The valid Transitions for this state are: ");
-                foreach (Link<T> value in dict[key])    //Prints the transitions
-                {
-                    Console.WriteLine(value.from.ToString() + " to " + value.to.ToString());
-                }
-                Console.WriteLine(" ");
-                count++;    //Counts what the state's index is.
-            }
-        }
-
-        public bool SwitchStates(T to)  //Changing the current state of a FSM to another state
-        {
-            Link<T> temp = new Link<T>();   //Set up temp variable
-            temp.from = this.currentState;  //Coming from the current state
-            temp.to = to;
-
-            foreach (Link<T> l in dict[this.currentState])  //Check Transitions for this State/Key
-            {
-                if (l.Equals(temp)) //If Transition Exists, 
-                {
-                    this.currentState = l.to; //Current State equals the next state
-                    return true;
-                }
-            }
-            return false;   //Invalid Transition
+            //Debug.Log("adding transition " + name);
+            TransitionsList.Add(name);
         }
     }
+
+
+    private bool checkTransition(T from, T to)
+    {
+        //checks the transition an object is trying to make to see if it is valid by checking it against
+        //items in the list of valid transitions
+        string t = to.ToString();
+        string f = from.ToString();
+        string valid = f + ">" + t;
+        if (TransitionsList.Contains(valid))
+            return true;
+        return false;
+    }
+
+    public bool Transition(T from, T to)
+    {
+        //If the transition is a valid one it sets the current state of the object to the transition
+        //it was trying to transition too
+        //If it wasn't the state of the object doesnt change
+        //Debug.Log("making transition from " + from.ToString() + " to " + to.ToString());
+        if (checkTransition(from, to))
+        {
+            //Debug.Log("valid transition from " + from.ToString() + " to " + to.ToString());
+            cState = to;
+            Console.WriteLine("New State " + cState.ToString());
+            return true;
+        }
+        else
+        {
+            //Debug.Log("INVALID TRANSITION NOT CHANGING STATE :: from " + from.ToString() + " to " + to.ToString());
+            return false;
+        }
+    }
+
+    private T cState; //current state
+
+
+
+    public T state //gets the cState of the object with out modifying it out side of the FSM
+    {
+        get
+        {
+            return cState;
+        }
+    }
+
 }

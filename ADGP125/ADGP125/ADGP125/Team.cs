@@ -10,31 +10,43 @@ namespace ADGP125
     {
         interface I_Abilites
         {
-            void M1();
-            int M1cd();
+            void Auto();
+            void Spec();
+            int cd(int x);
             
             
         }
         class Fighter : I_Abilites
         {
-            public string name;
-            public int health;
-            public int mana;
-            public int exp;
-            public int lvl;
-            public int Str;
-            public int att;
-            public int def;
+            public string name; //The specific name stored for this specific object.
+            public int Max_health;//Maximum amount of mana that this unit can have.
+            public int health; //current Health
+            public int Max_mana; //Maximum amount of mana that this unit can have.
+            public int mana; //current mana
+            public int exp; //current experience
+            public int lvl; //current overall level
+            public int Str; //amount of possible damage
+            public int att; //possiblity of hitting the target
+            public int def; //damage mitigation
 
-            public void M1()
+            public void Auto()
             {
-                throw new NotImplementedException();
+                //figure out how to decrease another SPECIFIC units health by strength.
+            }
+
+            public void Spec()
+            {
+                //figure out how to decrease another specific unit's health by a modifier of the strength stat.
+                
             }
 
            
-            public int M1cd()
+            public int cd(int x)
             {
-                throw new NotImplementedException();
+                //use this as an integer for the cooldown or wait period until the user can use the spcial attack again.
+                x = 4;
+               
+                return x;
             }
 
         }

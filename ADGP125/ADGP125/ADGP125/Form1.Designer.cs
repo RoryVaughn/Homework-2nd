@@ -49,7 +49,6 @@
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.Spec11 = new System.Windows.Forms.Button();
-            this.Block11 = new System.Windows.Forms.Button();
             this.Start = new System.Windows.Forms.Button();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.textBox18 = new System.Windows.Forms.TextBox();
@@ -70,7 +69,6 @@
             this.Attack12 = new System.Windows.Forms.Button();
             this.Block12 = new System.Windows.Forms.Button();
             this.Spec12 = new System.Windows.Forms.Button();
-            this.Block22 = new System.Windows.Forms.Button();
             this.Spec22 = new System.Windows.Forms.Button();
             this.Attack22 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -242,6 +240,7 @@
             // 
             // textBox16
             // 
+            this.textBox16.HideSelection = false;
             this.textBox16.Location = new System.Drawing.Point(772, 212);
             this.textBox16.Name = "textBox16";
             this.textBox16.ReadOnly = true;
@@ -256,15 +255,6 @@
             this.Spec11.TabIndex = 20;
             this.Spec11.Text = "Special Attack";
             this.Spec11.UseVisualStyleBackColor = true;
-            // 
-            // Block11
-            // 
-            this.Block11.Location = new System.Drawing.Point(130, 200);
-            this.Block11.Name = "Block11";
-            this.Block11.Size = new System.Drawing.Size(70, 42);
-            this.Block11.TabIndex = 21;
-            this.Block11.Text = "Block";
-            this.Block11.UseVisualStyleBackColor = true;
             // 
             // Start
             // 
@@ -419,9 +409,9 @@
             // 
             // Block12
             // 
-            this.Block12.Location = new System.Drawing.Point(206, 200);
+            this.Block12.Location = new System.Drawing.Point(130, 200);
             this.Block12.Name = "Block12";
-            this.Block12.Size = new System.Drawing.Size(70, 42);
+            this.Block12.Size = new System.Drawing.Size(146, 42);
             this.Block12.TabIndex = 44;
             this.Block12.Text = "Block";
             this.Block12.UseVisualStyleBackColor = true;
@@ -434,15 +424,6 @@
             this.Spec12.TabIndex = 43;
             this.Spec12.Text = "Special Attack";
             this.Spec12.UseVisualStyleBackColor = true;
-            // 
-            // Block22
-            // 
-            this.Block22.Location = new System.Drawing.Point(213, 440);
-            this.Block22.Name = "Block22";
-            this.Block22.Size = new System.Drawing.Size(70, 42);
-            this.Block22.TabIndex = 46;
-            this.Block22.Text = "Block";
-            this.Block22.UseVisualStyleBackColor = true;
             // 
             // Spec22
             // 
@@ -495,7 +476,7 @@
             // 
             this.Block21.Location = new System.Drawing.Point(130, 440);
             this.Block21.Name = "Block21";
-            this.Block21.Size = new System.Drawing.Size(70, 42);
+            this.Block21.Size = new System.Drawing.Size(153, 42);
             this.Block21.TabIndex = 49;
             this.Block21.Text = "Block";
             this.Block21.UseVisualStyleBackColor = true;
@@ -516,6 +497,7 @@
             this.textBox33.ReadOnly = true;
             this.textBox33.Size = new System.Drawing.Size(70, 20);
             this.textBox33.TabIndex = 51;
+            this.textBox33.TextChanged += new System.EventHandler(this.textBox33_TextChanged);
             // 
             // textBox34
             // 
@@ -555,7 +537,6 @@
             this.Controls.Add(this.Spec21);
             this.Controls.Add(this.Attack21);
             this.Controls.Add(this.Attack22);
-            this.Controls.Add(this.Block22);
             this.Controls.Add(this.Spec22);
             this.Controls.Add(this.Block12);
             this.Controls.Add(this.Spec12);
@@ -577,7 +558,6 @@
             this.Controls.Add(this.textBox18);
             this.Controls.Add(this.textBox17);
             this.Controls.Add(this.Start);
-            this.Controls.Add(this.Block11);
             this.Controls.Add(this.Spec11);
             this.Controls.Add(this.textBox16);
             this.Controls.Add(this.textBox15);
@@ -630,7 +610,6 @@
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.Button Spec11;
-        private System.Windows.Forms.Button Block11;
         private System.Windows.Forms.Button Start;
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.TextBox textBox18;
@@ -651,7 +630,6 @@
         private System.Windows.Forms.Button Attack12;
         private System.Windows.Forms.Button Block12;
         private System.Windows.Forms.Button Spec12;
-        private System.Windows.Forms.Button Block22;
         private System.Windows.Forms.Button Spec22;
         private System.Windows.Forms.Button Attack22;
         private System.Windows.Forms.PictureBox pictureBox2;

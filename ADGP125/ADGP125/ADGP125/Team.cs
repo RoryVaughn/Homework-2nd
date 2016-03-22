@@ -16,11 +16,11 @@ namespace ADGP125
             
             
         }
-        class Fighter : I_Abilites
-        {
+        public class Fighter  : I_Abilites
+        { 
             public string name; //The specific name stored for this specific object.
             public int Max_health;//Maximum amount of mana that this unit can have.
-            public int health; //current Health
+            public int health; //current Health68
             public int Max_mana; //Maximum amount of mana that this unit can have.
             public int mana; //current mana
             public int exp; //current experience
@@ -49,6 +49,11 @@ namespace ADGP125
                 return x;
             }
 
+            public Fighter(string F_Name, int F_Max_Health, int F_Health, int F_Max_Mana, int F_Mana, int F_Exp, int F_Level, int F_Str, int F_Att, int F_Def)
+            
+            {
+
+            }
         }
 
         

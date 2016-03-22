@@ -32,7 +32,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Quit = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -48,9 +48,9 @@
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.Spec11 = new System.Windows.Forms.Button();
+            this.Block11 = new System.Windows.Forms.Button();
+            this.Start = new System.Windows.Forms.Button();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.textBox19 = new System.Windows.Forms.TextBox();
@@ -67,17 +67,17 @@
             this.textBox30 = new System.Windows.Forms.TextBox();
             this.textBox31 = new System.Windows.Forms.TextBox();
             this.textBox32 = new System.Windows.Forms.TextBox();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
+            this.Attack12 = new System.Windows.Forms.Button();
+            this.Block12 = new System.Windows.Forms.Button();
+            this.Spec12 = new System.Windows.Forms.Button();
+            this.Block22 = new System.Windows.Forms.Button();
+            this.Spec22 = new System.Windows.Forms.Button();
+            this.Attack22 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.Attack21 = new System.Windows.Forms.Button();
+            this.Spec21 = new System.Windows.Forms.Button();
+            this.Block21 = new System.Windows.Forms.Button();
+            this.Attack11 = new System.Windows.Forms.Button();
             this.textBox33 = new System.Windows.Forms.TextBox();
             this.textBox34 = new System.Windows.Forms.TextBox();
             this.textBox35 = new System.Windows.Forms.TextBox();
@@ -117,14 +117,14 @@
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // button2
+            // Quit
             // 
-            this.button2.Location = new System.Drawing.Point(468, 247);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 50);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Quit";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Quit.Location = new System.Drawing.Point(468, 247);
+            this.Quit.Name = "Quit";
+            this.Quit.Size = new System.Drawing.Size(86, 50);
+            this.Quit.TabIndex = 4;
+            this.Quit.Text = "Quit";
+            this.Quit.UseVisualStyleBackColor = true;
             // 
             // textBox2
             // 
@@ -248,32 +248,33 @@
             this.textBox16.Size = new System.Drawing.Size(100, 20);
             this.textBox16.TabIndex = 19;
             // 
-            // button3
+            // Spec11
             // 
-            this.button3.Location = new System.Drawing.Point(130, 142);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(70, 38);
-            this.button3.TabIndex = 20;
-            this.button3.Text = "Special Attack";
-            this.button3.UseVisualStyleBackColor = true;
+            this.Spec11.Location = new System.Drawing.Point(130, 142);
+            this.Spec11.Name = "Spec11";
+            this.Spec11.Size = new System.Drawing.Size(70, 38);
+            this.Spec11.TabIndex = 20;
+            this.Spec11.Text = "Special Attack";
+            this.Spec11.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // Block11
             // 
-            this.button4.Location = new System.Drawing.Point(130, 200);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(70, 42);
-            this.button4.TabIndex = 21;
-            this.button4.Text = "Block";
-            this.button4.UseVisualStyleBackColor = true;
+            this.Block11.Location = new System.Drawing.Point(130, 200);
+            this.Block11.Name = "Block11";
+            this.Block11.Size = new System.Drawing.Size(70, 42);
+            this.Block11.TabIndex = 21;
+            this.Block11.Text = "Block";
+            this.Block11.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // Start
             // 
-            this.button5.Location = new System.Drawing.Point(325, 248);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(86, 50);
-            this.button5.TabIndex = 22;
-            this.button5.Text = "Start";
-            this.button5.UseVisualStyleBackColor = true;
+            this.Start.Location = new System.Drawing.Point(325, 248);
+            this.Start.Name = "Start";
+            this.Start.Size = new System.Drawing.Size(86, 50);
+            this.Start.TabIndex = 22;
+            this.Start.Text = "Start";
+            this.Start.UseVisualStyleBackColor = true;
+            this.Start.Click += new System.EventHandler(this.Start_Click);
             // 
             // textBox17
             // 
@@ -407,60 +408,60 @@
             this.textBox32.Size = new System.Drawing.Size(100, 20);
             this.textBox32.TabIndex = 41;
             // 
-            // button9
+            // Attack12
             // 
-            this.button9.Location = new System.Drawing.Point(206, 94);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(70, 34);
-            this.button9.TabIndex = 42;
-            this.button9.Text = "Attack";
-            this.button9.UseVisualStyleBackColor = true;
+            this.Attack12.Location = new System.Drawing.Point(206, 94);
+            this.Attack12.Name = "Attack12";
+            this.Attack12.Size = new System.Drawing.Size(70, 34);
+            this.Attack12.TabIndex = 42;
+            this.Attack12.Text = "Attack";
+            this.Attack12.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // Block12
             // 
-            this.button10.Location = new System.Drawing.Point(206, 200);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(70, 42);
-            this.button10.TabIndex = 44;
-            this.button10.Text = "Block";
-            this.button10.UseVisualStyleBackColor = true;
+            this.Block12.Location = new System.Drawing.Point(206, 200);
+            this.Block12.Name = "Block12";
+            this.Block12.Size = new System.Drawing.Size(70, 42);
+            this.Block12.TabIndex = 44;
+            this.Block12.Text = "Block";
+            this.Block12.UseVisualStyleBackColor = true;
             // 
-            // button11
+            // Spec12
             // 
-            this.button11.Location = new System.Drawing.Point(206, 142);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(70, 38);
-            this.button11.TabIndex = 43;
-            this.button11.Text = "Special Attack";
-            this.button11.UseVisualStyleBackColor = true;
+            this.Spec12.Location = new System.Drawing.Point(206, 142);
+            this.Spec12.Name = "Spec12";
+            this.Spec12.Size = new System.Drawing.Size(70, 38);
+            this.Spec12.TabIndex = 43;
+            this.Spec12.Text = "Special Attack";
+            this.Spec12.UseVisualStyleBackColor = true;
             // 
-            // button12
+            // Block22
             // 
-            this.button12.Location = new System.Drawing.Point(213, 440);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(70, 42);
-            this.button12.TabIndex = 46;
-            this.button12.Text = "Block";
-            this.button12.UseVisualStyleBackColor = true;
+            this.Block22.Location = new System.Drawing.Point(213, 440);
+            this.Block22.Name = "Block22";
+            this.Block22.Size = new System.Drawing.Size(70, 42);
+            this.Block22.TabIndex = 46;
+            this.Block22.Text = "Block";
+            this.Block22.UseVisualStyleBackColor = true;
             // 
-            // button13
+            // Spec22
             // 
-            this.button13.Location = new System.Drawing.Point(214, 384);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(70, 38);
-            this.button13.TabIndex = 45;
-            this.button13.Text = "Special Attack";
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
+            this.Spec22.Location = new System.Drawing.Point(214, 384);
+            this.Spec22.Name = "Spec22";
+            this.Spec22.Size = new System.Drawing.Size(70, 38);
+            this.Spec22.TabIndex = 45;
+            this.Spec22.Text = "Special Attack";
+            this.Spec22.UseVisualStyleBackColor = true;
+            this.Spec22.Click += new System.EventHandler(this.button13_Click);
             // 
-            // button14
+            // Attack22
             // 
-            this.button14.Location = new System.Drawing.Point(214, 334);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(70, 34);
-            this.button14.TabIndex = 47;
-            this.button14.Text = "Attack";
-            this.button14.UseVisualStyleBackColor = true;
+            this.Attack22.Location = new System.Drawing.Point(214, 334);
+            this.Attack22.Name = "Attack22";
+            this.Attack22.Size = new System.Drawing.Size(70, 34);
+            this.Attack22.TabIndex = 47;
+            this.Attack22.Text = "Attack";
+            this.Attack22.UseVisualStyleBackColor = true;
             // 
             // pictureBox2
             // 
@@ -472,41 +473,41 @@
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
-            // button6
+            // Attack21
             // 
-            this.button6.Location = new System.Drawing.Point(130, 334);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(70, 34);
-            this.button6.TabIndex = 47;
-            this.button6.Text = "Attack";
-            this.button6.UseVisualStyleBackColor = true;
+            this.Attack21.Location = new System.Drawing.Point(130, 334);
+            this.Attack21.Name = "Attack21";
+            this.Attack21.Size = new System.Drawing.Size(70, 34);
+            this.Attack21.TabIndex = 47;
+            this.Attack21.Text = "Attack";
+            this.Attack21.UseVisualStyleBackColor = true;
             // 
-            // button15
+            // Spec21
             // 
-            this.button15.Location = new System.Drawing.Point(130, 384);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(70, 38);
-            this.button15.TabIndex = 48;
-            this.button15.Text = "Special Attack";
-            this.button15.UseVisualStyleBackColor = true;
+            this.Spec21.Location = new System.Drawing.Point(130, 384);
+            this.Spec21.Name = "Spec21";
+            this.Spec21.Size = new System.Drawing.Size(70, 38);
+            this.Spec21.TabIndex = 48;
+            this.Spec21.Text = "Special Attack";
+            this.Spec21.UseVisualStyleBackColor = true;
             // 
-            // button16
+            // Block21
             // 
-            this.button16.Location = new System.Drawing.Point(130, 440);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(70, 42);
-            this.button16.TabIndex = 49;
-            this.button16.Text = "Block";
-            this.button16.UseVisualStyleBackColor = true;
+            this.Block21.Location = new System.Drawing.Point(130, 440);
+            this.Block21.Name = "Block21";
+            this.Block21.Size = new System.Drawing.Size(70, 42);
+            this.Block21.TabIndex = 49;
+            this.Block21.Text = "Block";
+            this.Block21.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // Attack11
             // 
-            this.button7.Location = new System.Drawing.Point(130, 94);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(70, 34);
-            this.button7.TabIndex = 50;
-            this.button7.Text = "Attack";
-            this.button7.UseVisualStyleBackColor = true;
+            this.Attack11.Location = new System.Drawing.Point(130, 95);
+            this.Attack11.Name = "Attack11";
+            this.Attack11.Size = new System.Drawing.Size(70, 34);
+            this.Attack11.TabIndex = 50;
+            this.Attack11.Text = "Attack";
+            this.Attack11.UseVisualStyleBackColor = true;
             // 
             // textBox33
             // 
@@ -549,16 +550,16 @@
             this.Controls.Add(this.textBox35);
             this.Controls.Add(this.textBox34);
             this.Controls.Add(this.textBox33);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button16);
-            this.Controls.Add(this.button15);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button14);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button13);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button9);
+            this.Controls.Add(this.Attack11);
+            this.Controls.Add(this.Block21);
+            this.Controls.Add(this.Spec21);
+            this.Controls.Add(this.Attack21);
+            this.Controls.Add(this.Attack22);
+            this.Controls.Add(this.Block22);
+            this.Controls.Add(this.Spec22);
+            this.Controls.Add(this.Block12);
+            this.Controls.Add(this.Spec12);
+            this.Controls.Add(this.Attack12);
             this.Controls.Add(this.textBox32);
             this.Controls.Add(this.textBox31);
             this.Controls.Add(this.textBox30);
@@ -575,9 +576,9 @@
             this.Controls.Add(this.textBox19);
             this.Controls.Add(this.textBox18);
             this.Controls.Add(this.textBox17);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.Start);
+            this.Controls.Add(this.Block11);
+            this.Controls.Add(this.Spec11);
             this.Controls.Add(this.textBox16);
             this.Controls.Add(this.textBox15);
             this.Controls.Add(this.textBox14);
@@ -593,7 +594,7 @@
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Quit);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button1);
@@ -612,7 +613,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Quit;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
@@ -628,9 +629,9 @@
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button Spec11;
+        private System.Windows.Forms.Button Block11;
+        private System.Windows.Forms.Button Start;
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.TextBox textBox19;
@@ -647,17 +648,17 @@
         private System.Windows.Forms.TextBox textBox30;
         private System.Windows.Forms.TextBox textBox31;
         private System.Windows.Forms.TextBox textBox32;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button Attack12;
+        private System.Windows.Forms.Button Block12;
+        private System.Windows.Forms.Button Spec12;
+        private System.Windows.Forms.Button Block22;
+        private System.Windows.Forms.Button Spec22;
+        private System.Windows.Forms.Button Attack22;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button Attack21;
+        private System.Windows.Forms.Button Spec21;
+        private System.Windows.Forms.Button Block21;
+        private System.Windows.Forms.Button Attack11;
         private System.Windows.Forms.TextBox textBox33;
         private System.Windows.Forms.TextBox textBox34;
         private System.Windows.Forms.TextBox textBox35;

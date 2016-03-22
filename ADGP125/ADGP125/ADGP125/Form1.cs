@@ -19,7 +19,7 @@ namespace ADGP125
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You thought this thing worked?!  XD");
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -30,6 +30,11 @@ namespace ADGP125
         private void button13_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Start_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("You thought this thing worked?!  XD");
         }
     }
 }

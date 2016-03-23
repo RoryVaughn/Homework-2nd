@@ -32,7 +32,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.Quit = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -49,7 +48,6 @@
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.Spec11 = new System.Windows.Forms.Button();
-            this.Start = new System.Windows.Forms.Button();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.textBox19 = new System.Windows.Forms.TextBox();
@@ -114,15 +112,6 @@
             this.textBox1.TabIndex = 3;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // Quit
-            // 
-            this.Quit.Location = new System.Drawing.Point(468, 247);
-            this.Quit.Name = "Quit";
-            this.Quit.Size = new System.Drawing.Size(86, 50);
-            this.Quit.TabIndex = 4;
-            this.Quit.Text = "Quit";
-            this.Quit.UseVisualStyleBackColor = true;
             // 
             // textBox2
             // 
@@ -256,16 +245,7 @@
             this.Spec11.TabIndex = 20;
             this.Spec11.Text = "Special Attack";
             this.Spec11.UseVisualStyleBackColor = true;
-            // 
-            // Start
-            // 
-            this.Start.Location = new System.Drawing.Point(325, 248);
-            this.Start.Name = "Start";
-            this.Start.Size = new System.Drawing.Size(86, 50);
-            this.Start.TabIndex = 22;
-            this.Start.Text = "Start";
-            this.Start.UseVisualStyleBackColor = true;
-            this.Start.Click += new System.EventHandler(this.Start_Click);
+            this.Spec11.Click += new System.EventHandler(this.Spec11_Click);
             // 
             // textBox17
             // 
@@ -408,6 +388,7 @@
             this.Attack12.TabIndex = 42;
             this.Attack12.Text = "Attack";
             this.Attack12.UseVisualStyleBackColor = true;
+            this.Attack12.Click += new System.EventHandler(this.Attack12_Click);
             // 
             // Block12
             // 
@@ -426,6 +407,7 @@
             this.Spec12.TabIndex = 43;
             this.Spec12.Text = "Special Attack";
             this.Spec12.UseVisualStyleBackColor = true;
+            this.Spec12.Click += new System.EventHandler(this.Spec12_Click);
             // 
             // Spec22
             // 
@@ -445,6 +427,7 @@
             this.Attack22.TabIndex = 47;
             this.Attack22.Text = "Attack";
             this.Attack22.UseVisualStyleBackColor = true;
+            this.Attack22.Click += new System.EventHandler(this.Attack22_Click);
             // 
             // pictureBox2
             // 
@@ -464,6 +447,7 @@
             this.Attack21.TabIndex = 47;
             this.Attack21.Text = "Attack";
             this.Attack21.UseVisualStyleBackColor = true;
+            this.Attack21.Click += new System.EventHandler(this.Attack21_Click);
             // 
             // Spec21
             // 
@@ -473,6 +457,7 @@
             this.Spec21.TabIndex = 48;
             this.Spec21.Text = "Special Attack";
             this.Spec21.UseVisualStyleBackColor = true;
+            this.Spec21.Click += new System.EventHandler(this.Spec21_Click);
             // 
             // Block21
             // 
@@ -491,6 +476,7 @@
             this.Attack11.TabIndex = 50;
             this.Attack11.Text = "Attack";
             this.Attack11.UseVisualStyleBackColor = true;
+            this.Attack11.Click += new System.EventHandler(this.Attack11_Click);
             // 
             // textBox33
             // 
@@ -559,7 +545,6 @@
             this.Controls.Add(this.textBox19);
             this.Controls.Add(this.textBox18);
             this.Controls.Add(this.textBox17);
-            this.Controls.Add(this.Start);
             this.Controls.Add(this.Spec11);
             this.Controls.Add(this.textBox16);
             this.Controls.Add(this.textBox15);
@@ -576,7 +561,6 @@
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.Quit);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button1);
@@ -595,7 +579,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button Quit;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
@@ -612,7 +595,6 @@
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.Button Spec11;
-        private System.Windows.Forms.Button Start;
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.TextBox textBox19;

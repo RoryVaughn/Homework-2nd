@@ -15,7 +15,7 @@ namespace ADGP125
         {
             void Auto(Fighter defender);
             void Spec(Fighter defender);
-            int cd(int x);
+            
             
             
         }
@@ -35,26 +35,28 @@ namespace ADGP125
             public void Auto(Fighter defender)
             {
                 //figure out how to decrease another SPECIFIC units health by strength.
-               
-                defender.health -= (Str * 10);
+                if (health > 0)
+                {
+                    defender.health -= (Str * 10);
+                }
             }
 
             public void Spec(Fighter defender)
             {
-                //figure out how to decrease another specific unit's health by a modifier of the strength stat.
-                mana -= 10;
-                
-                defender.health -= (Str * 15);
+                if (health > 0)
+                {
+                    if (mana > 0)
+                    {
+                        //figure out how to decrease another specific unit's health by a modifier of the strength stat.
+                        mana -= 10;
+
+                        defender.health -= (Str * 25);
+                    }
+                }
             }
 
            
-            public int cd(int x)
-            {
-                //use this as an integer for the cooldown or wait period until the user can use the spcial attack again.
-                x = 4;
-               
-                return x;
-            }
+          
 
             public Fighter(string F_Name, int F_Max_Health, int F_Health, int F_Max_Mana, int F_Mana, int F_Exp, int F_Level, int F_Str, int F_Att, int F_Def)
             

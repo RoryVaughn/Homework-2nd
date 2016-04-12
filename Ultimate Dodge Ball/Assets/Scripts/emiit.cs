@@ -4,19 +4,24 @@ using System.Collections;
 public class emiit : MonoBehaviour {
     public int speed = 30;
     public GameObject Sphere;
-	// Use this for initialization
-	void Start () {
-	
-	}
+    Random rnd2 = new Random();
+    public GameObject border;
+    void ball()
+    {
+
+        Instantiate(Sphere, new Vector3(gameObject.transform.position.x, 0,39), Quaternion.identity);
+
+    }
+    // Use this for initialization
+    void Start () {
+        InvokeRepeating("ball", 1, Random.Range(1, 20));
+        
+    }
 	
 	// Update is called once per frame
 	void Update () {
+        
 
-        if (Input.GetKeyDown(KeyCode.A))
-            {
 
-                Instantiate(Sphere, new Vector3(1 *Time.deltaTime * speed,0,16), Quaternion.identity);
-            }
-
-	}
+    }
 }
